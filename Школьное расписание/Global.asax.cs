@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Школьное_расписание.Controllers;
 
 namespace Школьное_расписание
 {
@@ -13,6 +14,7 @@ namespace Школьное_расписание
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            ControllerBuilder.Current.SetControllerFactory(new ControllerFactory());
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

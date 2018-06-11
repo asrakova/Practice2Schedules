@@ -1,0 +1,22 @@
+﻿@model Школьное_расписание.Teacher
+
+<h2>Список учителей</h2>
+
+@Html.ActionLink("Добавить учителя", "Add")
+<br />
+<table>
+    <tr>
+        <td>Имя</td>
+        <td>Логин</td>
+        <td></td>
+    </tr>
+    @foreach (Teacher th in (IEnumerable<Teacher>)ViewData["Teachers"])
+    {
+        <tr>
+            <td>@th.Name</td>
+            <td>@th.Login</td>
+            <td>@Html.ActionLink("Открыть", "Teacher", new { id = th.Id })</td>
+        </tr>
+    }
+</table>
+

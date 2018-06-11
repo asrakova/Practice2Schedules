@@ -1,0 +1,21 @@
+﻿@model Школьное_расписание.Subject
+
+<h2>Список предметов</h2>
+
+@Html.ActionLink("Добавить предмет", "Add")
+<br />
+<table>
+    <tr>
+        <td>Название</td>
+        <td>Учитель</td>
+        <td>Действие</td>
+    </tr>
+    @foreach (Subject sub in (IEnumerable<Subject>)ViewData["Subject"])
+    {
+        <tr>
+            <td>@sub.Name</td>
+            <td>@sub.Teacher.Name</td>
+            <td>@Html.ActionLink("Открыть", "Subject", new { id = sub.Id })</td>
+        </tr>
+    }
+</table>

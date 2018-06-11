@@ -1,0 +1,12 @@
+﻿@model Школьное_расписание.Teacher
+
+<h2>Добавление нового учителя</h2>
+@using (Html.BeginForm())
+{
+    <p>Имя: @Html.TextBox("Name") @Html.ValidationMessage("Name")</p>
+    <p>Логин: @Html.TextBox("Login") @Html.ValidationMessage("Login")</p>
+    <p>Пароль: @Html.TextBox("Password") @Html.ValidationMessage("Password")</p>
+    <p>Повторите пароль: @Html.TextBox("CopyPassword") @Html.ValidationMessage("CopyPassword")</p>
+    <p><input type="submit" value="Сохранить"> </p>
+}
+

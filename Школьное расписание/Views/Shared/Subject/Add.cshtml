@@ -1,0 +1,11 @@
+﻿@model Школьное_расписание.Subject
+
+<h2>Добавление предмета</h2>
+@using (Html.BeginForm())
+{
+    <p>Название: @Html.TextBox("Name") @Html.ValidationMessage("Name")</p>
+    <p>Кабинет: @Html.TextBox("Room") @Html.ValidationMessage("Room")</p>
+    <p>Автор: @Html.DropDownList("Type", (IEnumerable<SelectListItem>)ViewData["Type"]) @Html.ValidationMessage("Type")</p>
+    <p>Руководитель: @Html.DropDownList("Teacher", (IEnumerable<SelectListItem>)ViewData["Teachers"]) @Html.ValidationMessage("Teacher")</p>
+    <p><input type="submit" value="Сохранить"> </p>
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8a6978656bf4cc6816d6bd1636d0665" Name="Diagram1" ZoomLevel="74" DisplayType="true" >
+        <EntityTypeShape EntityType="Model1.Schedule" Width="1.5" PointX="0.875" PointY="4" />
+        <EntityTypeShape EntityType="Model1.Lesson" Width="1.5" PointX="3.25" PointY="3.125" />
+        <EntityTypeShape EntityType="Model1.SClass" Width="1.5" PointX="3" PointY="6.375" />
+        <EntityTypeShape EntityType="Model1.Subject" Width="1.5" PointX="5.75" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.Student" Width="1.5" PointX="8.375" PointY="11" />
+        <EntityTypeShape EntityType="Model1.Teacher" Width="1.5" PointX="8.375" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.Indiv_plan" Width="1.5" PointX="5.875" PointY="10.125" />
+        <EntityTypeShape EntityType="Model1.GroupLes" Width="1.5" PointX="8.25" PointY="6" />
+        <EntityTypeShape EntityType="Model1.PlanElem" Width="1.5" PointX="5.75" PointY="6.25" />
+        <AssociationConnector Association="Model1.ScheduleLesson" />
+        <AssociationConnector Association="Model1.SClassStudent" />
+        <AssociationConnector Association="Model1.PlanElemSClass" />
+        <AssociationConnector Association="Model1.SClassLesson" />
+        <AssociationConnector Association="Model1.SubjectTeacher" />
+        <AssociationConnector Association="Model1.SubjectGroupLes" />
+        <AssociationConnector Association="Model1.PlanElemSubject" />
+        <AssociationConnector Association="Model1.SubjectLesson" />
+        <AssociationConnector Association="Model1.Indiv_planStudent" />
+        <AssociationConnector Association="Model1.Indiv_planPlanElem" />
+        <AssociationConnector Association="Model1.GroupLesStudent" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
